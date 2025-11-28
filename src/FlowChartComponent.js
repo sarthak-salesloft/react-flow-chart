@@ -1,7 +1,12 @@
 import React from 'react';
-import { FlowChartWithState } from '@mrblenny/react-flow-chart';
+import { FlowChartWithState, LinkDefault } from '@mrblenny/react-flow-chart';
+
 import { chartData as initialChart } from './chart-data';
-import { NodeInnerDefault } from './components/NodeInner/NodeInnerDefault';
+import { CustomLink } from './components/Link/CustomLink';
+import { CustomNodeInner } from './components/NodeInner/CustomNodeInner';
+import { CustomPort } from './components/Port/CustomPort';
+
+
 
 export const FlowChartComponent = () => {
   return (
@@ -9,7 +14,12 @@ export const FlowChartComponent = () => {
       <FlowChartWithState
         initialValue={initialChart}
         Components={{
-          NodeInner: NodeInnerDefault,
+          NodeInner: CustomNodeInner,
+          Link: LinkDefault,
+          Port: CustomPort,
+        }}
+        config={{
+          showArrowHead: true,
         }}
       />
     </div>

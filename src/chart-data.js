@@ -18,6 +18,7 @@ export const chartData = {
           type: 'output',
           properties: {
             value: 'yes',
+            linkColor: 'green',
           },
         },
         port2: {
@@ -40,6 +41,9 @@ export const chartData = {
         port1: {
           id: 'port1',
           type: 'input',
+          properties: {
+            value: 'yes',
+          },
         },
         port2: {
           id: 'port2',
@@ -104,6 +108,10 @@ export const chartData = {
         port1: {
           id: 'port1',
           type: 'input',
+          properties: {
+            value: 'yes',
+            linkColor: 'green',
+          },
         },
       },
     },
@@ -156,12 +164,12 @@ export const chartData = {
     link5: {
       id: 'link5',
       from: {
-        nodeId: 'node4',
-        portId: 'port2',
-      },
-      to: {
         nodeId: 'node6',
         portId: 'port1',
+      },
+      to: {
+        nodeId: 'node2',
+        portId: 'port2',
       },
     },
   },

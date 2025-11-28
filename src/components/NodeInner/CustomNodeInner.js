@@ -4,9 +4,10 @@ import { IConfig, INode } from '../..'
 
 const Outer = styled.div`
   padding: 40px 30px;
+  margin-top: 10px 10px;
 `
 
-export const NodeInnerDefault = ({ node }) => {
+export const CustomNodeInner = ({ node }) => {
   return (
     <Outer>
       <div>{node.type}</div>
