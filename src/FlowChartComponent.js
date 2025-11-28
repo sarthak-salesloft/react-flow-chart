@@ -1,6 +1,5 @@
-import React from 'react';
 import { FlowChartWithState } from '@mrblenny/react-flow-chart';
-import { chart as initialChart } from './chart-data';
+import { chartData as initialChart } from './chart-data';
 
 export const FlowChartComponent = () => {
   return (
