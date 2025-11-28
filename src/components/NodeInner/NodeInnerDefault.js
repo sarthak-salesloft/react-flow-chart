@@ -1,0 +1,15 @@
+import * as React from 'react'
+import styled from 'styled-components'
+import { IConfig, INode } from '../..'
+
+const Outer = styled.div`
+  padding: 40px 30px;
+`
+
+export const NodeInnerDefault = ({ node }) => {
+  return (
+    <Outer>
+      <div>{node.type}</div>
+    </Outer>
+  )
+}
