@@ -1,7 +1,5 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import { IConfig, IPort } from '../../'
-
 
 const PortDefaultOuter = styled.div`
   width: 24px;
@@ -15,12 +13,21 @@ const PortDefaultOuter = styled.div`
 const PortDefaultInner = styled.div`
   width: 12px;
   height: 12px;
+  background: ${(props) => props.color || 'grey'};
+  border-radius: 50%;
   cursor: pointer;
 `
 
-export const CustomPort = ( isLinkSelected, isLinkHovered, config, className ) => (
-  <PortDefaultOuter className={className}>
-    <PortDefaultInner
-    />
-  </PortDefaultOuter>
-)
+export const CustomPort = (props) => {
+  // Get the linkColor from the port's properties, default to grey if not found
+  const linkColor = props.port.properties?.linkColor || 'grey';
+
+  return (
+    <PortDefaultOuter {...props}>
+      <PortDefaultInner
+        // Pass the color to the styled component
+        color={linkColor}
+      />
+    </PortDefaultOuter>
+  )
+}

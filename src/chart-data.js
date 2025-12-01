@@ -26,6 +26,7 @@ export const chartData = {
           type: 'output',
           properties: {
             value: 'no',
+            linkColor: 'cornflowerblue',
           },
         },
       },
@@ -42,12 +43,17 @@ export const chartData = {
           id: 'port1',
           type: 'input',
           properties: {
-            value: 'yes',
+            value: 'no',
+            linkColor: 'cornflowerblue',
           },
         },
         port2: {
           id: 'port2',
           type: 'output',
+          properties: {
+            value: 'no',
+            linkColor: 'cornflowerblue',
+          },
         },
       },
     },
@@ -62,6 +68,10 @@ export const chartData = {
         port1: {
           id: 'port1',
           type: 'input',
+          properties: {
+            value: 'no',
+            linkColor: 'cornflowerblue',
+          },
         },
       },
     },
@@ -76,10 +86,18 @@ export const chartData = {
         port1: {
           id: 'port1',
           type: 'input',
+          properties: {
+            value: 'no',
+            linkColor: 'cornflowerblue',
+          },
         },
         port2: {
           id: 'port2',
           type: 'output',
+          properties: {
+            value: 'no',
+            linkColor: 'cornflowerblue',
+          },
         },
       },
     },
@@ -94,6 +112,10 @@ export const chartData = {
         port1: {
           id: 'port1',
           type: 'input',
+          properties: {
+            value: 'no',
+            linkColor: 'cornflowerblue',
+          },
         },
       },
     },
@@ -127,6 +149,7 @@ export const chartData = {
         nodeId: 'node2',
         portId: 'port1',
       },
+      properties: { type: 'influence' },
     },
     link2: {
       id: 'link2',
@@ -138,6 +161,7 @@ export const chartData = {
         nodeId: 'node3',
         portId: 'port1',
       },
+      properties: { type: 'reports' },
     },
     link3: {
       id: 'link3',
@@ -149,6 +173,7 @@ export const chartData = {
         nodeId: 'node4',
         portId: 'port1',
       },
+      properties: { type: 'reports' },
     },
     link4: {
       id: 'link4',
@@ -160,6 +185,7 @@ export const chartData = {
         nodeId: 'node5',
         portId: 'port1',
       },
+      properties: { type: 'reports' },
     },
     link5: {
       id: 'link5',
@@ -171,6 +197,7 @@ export const chartData = {
         nodeId: 'node2',
         portId: 'port2',
       },
+      properties: { type: 'influence' },
     },
   },
   selected: {},

@@ -1,9 +1,9 @@
 import * as React from 'react';
 
 /**
- * A custom link component that renders a green link with an arrowhead.
+ * A custom link component that renders a dotted cornflowerblue link with an arrowhead.
  */
-export const CustomLink = ({
+export const DottedLink = ({
   link,
   startPos,
   endPos,
@@ -22,20 +22,25 @@ export const CustomLink = ({
       <defs>
         {/* Define the arrowhead marker */}
         <marker
-          id="arrowhead-green"
+          id="arrowhead-cornflowerblue"
           markerWidth="10"
-          markerHeight="10"
+          markerHeight="7"
           refX="8"
-          refY="5"
-          orient="vertical"
+          refY="3.5"
+          orient="auto"
         >
-          <polygon points="0 0, 10 3.5, 0 7" fill="green" />
+          <polygon points="0 0, 10 3.5, 0 7" fill="cornflowerblue" />
         </marker>
       </defs>
       <path
         d={path}
-        style={{ stroke: 'green', strokeWidth: '2px', fill: 'none' }}
-        markerEnd="url(#arrowhead-green)"
+        style={{
+          stroke: 'cornflowerblue',
+          strokeWidth: '2px',
+          fill: 'none',
+          strokeDasharray: '5, 5', // This creates the dotted effect
+        }}
+        markerEnd="url(#arrowhead-cornflowerblue)"
       />
       {/* Add a white rectangle behind the text to create a gap in the line */}
       <rect
@@ -50,9 +55,9 @@ export const CustomLink = ({
         y={midY}
         textAnchor="middle"
         dominantBaseline="middle"
-        style={{ fill: 'green', fontSize: '12px', fontWeight: 'bold' }}
+        style={{ fill: 'cornflowerblue', fontSize: '12px', fontWeight: 'bold' }}
       >
-        influences
+        reports to
       </text>
     </svg>
   );
